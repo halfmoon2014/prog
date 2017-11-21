@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="../css/jquerymobile/themes/default/jquery.mobile-1.4.2.min.css">
+    <script src="../js/jquerymobile/jquery.js"></script>
+    <script src="../js/jquerymobile/jquery.mobile-1.4.2.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/reportforfabric/reportforfabricdetail.js" type="text/javascript"
+        language="javascript"></script>
+</head>
+<body>
+    <div data-role="page" id="reportforfabricdetail">
+        <div data-role="header" data-position="fixed">
+            <a href="#" onclick="back()" data-icon="back">返回</a>
+            <h1>
+                ReportForFabricDetail</h1>
+            <a href="#" onclick="go()" data-icon="info">办理</a>
+            <div data-role="navbar" id="navbar">
+                <ul>
+                    <li><a href="#" mytype=sp index=0 >审批流程</a></li>
+                    <li><a href="#" mytype=zy index=1 >注意事项</a></li>
+                    <li><a href="#" mytype=th index=2 >退货明细</a></li>                  
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /header -->
+        <div role="main" id="reportforfabricdetail_main" class="ui-content">
+            <div id="reportforfabricdetail_content">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed">
+            <h4>
+                Copyright © lilanz.com 版权所有</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+</body>
+</html>

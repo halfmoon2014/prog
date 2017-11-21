@@ -1,0 +1,7 @@
+﻿http://www.cnblogs.com/xfuture/p/4169459.html
+SOLID原则
+S：SRP, Single Responsibility Principle, 单一责任原则
+O：OCP, Open Closed Principle, 开发封闭原则
+L: LSP, Liskov Substitution Principle, 里氏替换原则
+I：ISP, Interface Segregration Principle, 接口分离原则
+D: DIP, Dependency Inversion Principle, 依赖倒置原则

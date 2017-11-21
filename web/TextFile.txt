@@ -1,0 +1,25 @@
+﻿default2.aspx-测试后台事件和asp.net后台代码的顺序
+先执行script 中的代码,然后执行页面嵌入的代码
+
+testjpg.aspx 测试文件上传中的文件类型
+
+
+Default3.aspx 测试ashx, ashx后台文件可以是一个类,
+--也可以是别一个ashx的后台类,但要加上命名空间
+--奇怪第二天测试又不行
+--document输出脚本
+document.write('<script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"><\/script>');
+document.write('<script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"><'+'/script>');
+
+module.aspx
+module.js js模块化
+
+file.aspx 文件上传
+
+default6.aspx,default7.aspx,
+测试AutoEventWireup=true|false;
+default8.aspx
+测试 Inherits属性, CodeFile这个一定要正确,文件不存在的话会报错,Codebehind这个文件不存在不会报错
+
+
+qrcode.aspx 测试二维码扫描,只有android下的firefox有用

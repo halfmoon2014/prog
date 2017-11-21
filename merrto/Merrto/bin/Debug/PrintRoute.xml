@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tables>
+  
+  
+<table ID="1">
+    <FormID>唯品汇条码打印</FormID>
+    <Route>D:\迈途\唯品汇.grf</Route>
+  </table>
+  
+  
+<table ID="2">
+    <FormID>装箱条码</FormID>
+    <Route>D:\迈途\装箱.grf</Route>
+  </table>
+ 
+  
+<table ID="3">
+    <FormID>服装条码</FormID>
+    <Route>E:\work\服装.grf</Route>
+  </table>
+
+</Tables>

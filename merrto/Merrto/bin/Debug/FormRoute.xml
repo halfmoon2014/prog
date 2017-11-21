@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tables>  
+<table ID="1">
+    <FormID>鞋盒条码</FormID>
+    <Route>D:\迈途\鞋盒.grf</Route>
+  </table>
+  
+<table ID="2">
+    <FormID>装箱条码</FormID>
+    <Route>D:\迈途\装箱.grf</Route>
+  </table>
+  
+<table ID="3">
+    <FormID>包包条码</FormID>
+    <Route>D:\迈途\beibao.grf</Route>
+  </table>
+  
+<table ID="4">
+    <FormID>服装条码</FormID>
+    <Route>D:\迈途\服装.grf</Route>
+  </table>
+
+<table ID="5">
+    <FormID>鞋合条码</FormID>
+    <Route>D:\迈途\xuehe.grf</Route>
+  </table>
+
+<table ID="6">
+    <FormID>鞋合信息</FormID>
+    <Route>D:\迈途\XUEHEZL.grf</Route>
+  </table>
+
+</Tables>

@@ -1,0 +1,46 @@
+﻿<div data-role="dialog" id="aboutPage">
+    <div data-role="header" data-theme="a">
+        <h1>
+            提示信息</h1>
+    </div>
+    <div data-role="content" data-theme="a">
+        <h1>
+            </h1>
+        <p id="dialog_dialog_html_info">
+            info</p>
+         <a href="#" data-role="button" data-rel="back" data-theme="a">Ok</a>
+    </div>
+<script type="text/javascript">
+    $(document).bind("pagebeforeload", function (event, data) {
+        //alert('1.pagebeforeload!');
+        console.log("1.pagebeforeload");
+    });
+
+//    $('#aboutPage').live('pagebeforecreate', function (event) {
+//        alert('2.This page was just inserted into the dom!pagebeforecreate!!!');
+//    })
+
+//    $('#aboutPage').live('pagecreate', function (event) {
+//        alert('3.pagecreate!');
+//        $("#soundgood").attr("demo.htm");
+//        $("#soundgood").click(function () {
+//            alert("soundgood");
+//        });
+//    });
+//    $('#aboutPage').live('pageinit', function (event) {
+//        alert('4.This page was just enhanced by jQuery Mobile!pageinit!!!');
+//    });
+//    $(document).bind("pageload", function (event, data) {
+//        alert('5.pageload!');
+//    });
+//    $('#aboutPage').live('pageshow', function (event) {
+//        alert('6.pageshow!');
+//    });
+//    $('#aboutPage').live('pageremove', function (event) {
+//        alert('7.pageremove!');
+//    });
+//    $('#aboutPage').live('pagehide', function (event) {
+//        alert('8.pagehide!');
+//    });
+</script>
+</div>

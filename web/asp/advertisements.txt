@@ -1,0 +1,13 @@
+*
+img/1.jpg
+http://www.w3school.com.cn/html/html_reference.asp
+Complete HTML 4.0 Reference
+20
+img/2.jpg
+http://www.w3school.com.cn/
+Web Tutorials from W3School
+20
+img/3.jpg
+http://www.w3school.com.cn/js/js_reference.asp
+JavaScript Reference
+20

@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="SqsBusiness.BackWeb.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%-- 母版引用CSS或JS必须用绝对路径--%>
+    <script type="text/javascript" src="/backweb/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/backweb/js/jquery.easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/backweb/js/jquery.easyui/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" type="text/css" href="/backweb/css/jquery.easyui/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="/backweb/css/jquery.easyui/themes/default/easyui.css" />
+    <%--内容页面头内容--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form_master" runat="server">
+    <%--内容页面主体内容--%>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder_MasterPage" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

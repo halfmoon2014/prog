@@ -1,0 +1,35 @@
+openModal(url);全部有问题
+///////////////////
+\BB\img\calendar.js--已调整
+function   document.onclick()   //任意点击时关闭该控件   
+{     
+    with(window.event.srcElement)   
+    {  
+    if   (getAttribute("Author")==null   &&   tagName   !=   "INPUT")   
+//       if  (getAttribute("Author")==null )   
+        document.all.meizzDateLayer.style.display="none"; 
+        if (typeof(MyFunc_RqChange) == 'function') {MyFunc_RqChange();}  
+    }   
+} 
+
+   document.onclick=function()   //任意点击时关闭该控件   
+{     
+    with(window.event.srcElement)   
+    {  
+    if   (getAttribute("Author")==null   &&   tagName   !=   "INPUT")   
+//       if  (getAttribute("Author")==null )   
+        document.all.meizzDateLayer.style.display="none"; 
+        if (typeof(MyFunc_RqChange) == 'function') {MyFunc_RqChange();}  
+    }   
+} 
+function   document.onkeydown() -> document.onkeydown = function () 
+/////////////
+\tltools\calendar.js--已调整
+
+/////////////////////
+MyTreeCurrent(this);MyTreeSelect('18959','03',1,'16991',this.innerText,'?dxid=582063&djid=582063' )
+////////////
+flow\bbjs\flow.js--已调整
+Microsoft.XMLHTTP
+////////////////
+MyTreeSelect函数找不到

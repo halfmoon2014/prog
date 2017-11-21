@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/jquerymobile/themes/default/jquery.mobile-1.4.2.min.css">
+    <script src="js/jquerymobile/jquery.js"></script>
+    <script src="js/jquerymobile/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/utils.js"></script>
+</head>
+<body>
+    <div data-role="page" id="loginpage">
+ 
+        <div data-role="header" data-position="fixed">
+            <h1>
+                Login</h1>
+        </div>
+        <!-- /header -->
+        <div role="main" class="ui-content">
+            <form method="post" action="" >
+            <div>
+                <label for="userInput">
+                    协同系统用户名:</label>
+                <input type="text" id="userInput" placeholder="用户名"/>
+                <label for="pswInput">
+                    协同密码:</label>
+                <input type="password" id="pswInput" placeholder="密码"/>
+            </div>
+            <p id="login_error" class="paypw-err">
+            </p>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#"  data-role="button" id="btnOk" data-icon="check">登陆</a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" data-role="button" id="btnClear" data-icon="delete">取消</a>
+                </div>
+
+            </div>            
+            </form> 
+                 
+            <!-- refresh -->
+            <link rel="stylesheet" href="css/login/login.css">
+            <script src="js/login/login.js" type="text/javascript" language="javascript"></script>
+            <!-- refresh -->
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed">
+            <h4>
+                Copyright © lilanz.com 版权所有</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+</body>
+</html>

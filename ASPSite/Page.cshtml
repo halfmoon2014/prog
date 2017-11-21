@@ -1,0 +1,138 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <div><a href="top.cshtml">top.cshtml</a></div>
+       <div>
+        <!-- 单行代码块 -->
+        @{ var myMessage = "Hello World"; }
+
+        <!-- 行内表达式或变量 -->
+        <p>The value of myMessage is: @myMessage</p> 
+
+        <!-- 多行代码块 -->
+        @{
+        var greeting = "Welcome to our site!";
+        var weekDay = DateTime.Now.DayOfWeek;
+        var greetingMessage = greeting + " Today is: " + weekDay;
+        }
+        <p>The greeting222 is: @greetingMessage</p>
+        </div>
+        <div>
+            @RenderPage("top.cshtml")
+            
+        </div>
+        <div>
+            @{
+                var picurl="images/a.jpg";
+                var picurl2="~/images/a.jpg";
+                var pathName = "~/images/a.jpg";
+                var fileName = Server.MapPath(pathName);
+            }
+        <img src= @picurl width="50px" height="50px" alt="mus" >
+        <img src= @Href(picurl2) width="50px" height="50px" alt="msss" >
+        <img src= "@fileName" width="50px" height="50px" alt="msss" >
+        </div>
+        <div>
+        @{
+        if (IsPost) { 
+        string companyname = Request["companyname"]; 
+        string contactname = Request["contactname"]; 
+        <p>You entered: <br />
+        Company Name: @companyname <br />
+        Contact Name: @contactname </p>
+        }
+        else
+        {
+        <form method="post" action="">
+        Company Name:<br />
+        <input type="text" name="CompanyName" value="" /><br />
+        Contact Name:<br />
+        <input type="text" name="ContactName" value="" /><br /><br />
+        <input type="submit" value="Submit" class="submit" />
+        </form>
+        }
+        }         
+        </div>
+        <div>
+        
+            @{
+            var imagePath=""; var as1="";var bs1="";var cs1="";
+            if (Request["Choice"] != null)
+               {
+                   imagePath="images/" + Request["Choice"];
+                   if(Request["Choice"]=="a.jpg"){as1="selected";}
+                   if(Request["Choice"]=="b.jpg"){bs1="selected";}
+                   if(Request["Choice"]=="c.jpg"){cs1="selected";}
+               } 
+
+
+            } 
+            <form method="post" action=""> 
+            I want to see: 
+            <select name="Choice"> 
+              <option @as1 value="a.jpg">Photo 1</option> 
+              <option @bs1 value="b.jpg">Photo 2</option> 
+              <option @cs1 value="c.jpg">Photo 3</option> 
+            </select> 
+            <input type="submit" value="Submit" /> 
+            @if (imagePath != "")
+            {
+            <p>
+            <img src="@imagePath" width="50px" height="50px" alt="Sample" />
+            </p>
+            }  
+            </form>                     
+        </div>
+        <div>
+        @{
+            Write(pathName);
+            <br/>
+            WriteLiteral(Page);
+            
+            
+        }
+        </div>
+        <div>
+        @{
+            var dataFile = Server.MapPath("~/App_Data/Persons.txt");
+            Array userData = File.ReadAllLines(dataFile);
+        }
+        <h1>Reading Data from a File</h1>
+        @foreach (string dataLine in userData) 
+        {
+          foreach (string dataItem in dataLine.Split(',')) 
+          {@dataItem;<text> </text><input type="text" value="12test"/>}
+          <br />
+        }
+        </div>
+         <div>
+@{ 
+var db = Database.Open("testdb") ; 
+var selectQueryString = "SELECT * FROM mytesttable"; 
+var data = db.Query(selectQueryString); 
+var grid = new WebGrid(data); 
+}
+<h1>Small Bakery Products</h1> 
+<div id="grid"> 
+@grid.GetHtml()
+</div>                      
+         </div>
+
+<div>
+    <img src="makechart.cshtml"/>
+    <img src="makechart2.cshtml"/>
+</div>     
+<div>
+<a href="Email_Input.cshtml">email</a>
+</div>           
+    </body>
+</html>

@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BAE209B-479E-46F0-ACE2-7BF802966955}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqsBusiness</RootNamespace>
+    <AssemblyName>SqsBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackWeb\Agency\sqb_bweb_sqb_agency.aspx" />
+    <Content Include="BackWeb\Agency\sqb_bweb_sqb_agency_add.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_attendance_manage.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_attendance_query.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_attendance_statistics.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_holiday_edit.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_holiday_set.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_scheduling_edit.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_scheduling_set.aspx" />
+    <Content Include="BackWeb\Attendance\sqb_bweb_select_person.aspx" />
+    <Content Include="BackWeb\Client\sqb_bweb_sqb_client.aspx" />
+    <Content Include="BackWeb\Client\sqb_bweb_sqb_client_add.aspx" />
+    <Content Include="BackWeb\Css\backweb\sqb_bweb_main.css" />
+    <Content Include="BackWeb\Css\backweb\User\sqb_bweb_users_groups.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\accordion.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\calendar.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\combo.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\combobox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\datagrid.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\datebox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\dialog.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\easyui.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\accordion_collapse.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\accordion_expand.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\blank.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\button_a_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\button_plain_hover.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\button_span_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\combo_arrow.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\menu.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\menu_downarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\menu_rightarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\menu_sep.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\messager_error.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\messager_info.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\messager_question.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\messager_warning.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\pagination_first.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\pagination_last.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\pagination_load.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\pagination_loading.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\pagination_next.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\pagination_prev.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\panel_loading.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\panel_title.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\panel_tools.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\panel_tool_collapse.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\panel_tool_expand.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\slider_handle.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tabs_active.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tabs_close.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tabs_enabled.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_arrows.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_dnd_no.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_elbow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_file.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_folder.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_folder_open.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\tree_loading.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\layout.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\linkbutton.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\menu.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\menubutton.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\messager.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\pagination.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\panel.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\progressbar.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\propertygrid.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\searchbox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\slider.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\spinner.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\splitbutton.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\tabs.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\tree.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\validatebox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\default\window.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\accordion.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\calendar.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\combo.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\combobox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\datagrid.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\datebox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\dialog.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\easyui.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\accordion_collapse.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\accordion_expand.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\blank.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\button_a_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\button_plain_hover.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\button_span_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\calendar_nextmonth.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\calendar_nextyear.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\calendar_prevmonth.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\calendar_prevyear.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\combo_arrow.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datagrid_header_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datagrid_row_expand.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datagrid_title_bg.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\menu.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\menu_downarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\menu_rightarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\menu_sep.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\menu_split_downarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\messager_error.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\messager_info.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\messager_question.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\messager_warning.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\pagination_first.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\pagination_last.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\pagination_load.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\pagination_loading.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\pagination_next.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\pagination_prev.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\panel_loading.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\panel_title.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\panel_tools.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\panel_tool_collapse.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\panel_tool_expand.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\spinner_arrow_down.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\spinner_arrow_up.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tabs_close.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tabs_enabled.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tabs_leftarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tabs_rightarrow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_arrows.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_checkbox_0.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_checkbox_1.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_checkbox_2.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_dnd_no.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_dnd_yes.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_elbow.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_file.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_folder.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_folder_open.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\tree_loading.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\validatebox_pointer.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\layout.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\linkbutton.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\menu.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\menubutton.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\messager.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\pagination.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\panel.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\progressbar.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\propertygrid.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\searchbox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\slider.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\spinner.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\splitbutton.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\tabs.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\tree.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\validatebox.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\gray\window.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icon.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\application.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\back.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\blank.gif" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\calendar.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\cancel.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\cut.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\date.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\delete.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\edit_add.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\edit_remove.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\email.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\filesave.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\film.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\folder.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\help.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\layout.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\map.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\mini_add.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\mini_edit.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\mini_refresh.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\no.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\ok.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\pencil.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\picture.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\print.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\redo.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\reload.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\search.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\sum.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\tip.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\undo.png" />
+    <Content Include="BackWeb\Css\backweb\sqb_bweb_login.css" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\user.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\user_edit.png" />
+    <Content Include="BackWeb\Css\jquery.easyui\themes\icons\user_red.png" />
+    <Content Include="BackWeb\Document\sqb_bweb_document_design.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_document_list.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_document_log.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_document_manage.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_document_query.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_folder_design.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_folder_manage.aspx" />
+    <Content Include="BackWeb\Document\sqb_bweb_folder_select.aspx" />
+    <Content Include="BackWeb\Images\button\button_bg.gif" />
+    <Content Include="BackWeb\Images\login\footer.jpg" />
+    <Content Include="BackWeb\Images\login\loginbtn.jpg" />
+    <Content Include="BackWeb\Images\login\top.jpg" />
+    <Content Include="BackWeb\Images\main\header.jpg" />
+    <Content Include="BackWeb\Images\main\menu_bg.gif" />
+    <Content Include="BackWeb\Images\main\menu_bg1.gif" />
+    <Content Include="BackWeb\Images\main\menu_bg2.gif" />
+    <Content Include="BackWeb\Images\main\menu_bgs.gif" />
+    <Content Include="BackWeb\Images\user\bg-boxtop-cter.png" />
+    <Content Include="BackWeb\Images\user\bg-boxtop-cter10.png" />
+    <Content Include="BackWeb\Images\user\bg-boxtop-left.png" />
+    <Content Include="BackWeb\Images\user\bg-boxtop-left10.png" />
+    <Content Include="BackWeb\Images\user\bg-boxtop-right.png" />
+    <Content Include="BackWeb\Images\user\bg-boxtop-right10.png" />
+    <Content Include="BackWeb\Images\user\bg-split.png" />
+    <Content Include="BackWeb\Js\backweb\Route\sqb_bweb_rount_dayline.js" />
+    <Content Include="BackWeb\Js\backweb\Route\sqb_bweb_rount_map.js" />
+    <Content Include="BackWeb\Js\backweb\Route\sqb_bweb_rount_select.js" />
+    <Content Include="BackWeb\Js\backweb\sqb_bweb_main.js" />
+    <Content Include="BackWeb\Js\backweb\User\sqb_bweb_users.js" />
+    <Content Include="BackWeb\Js\backweb\User\sqb_bweb_users_groups.js" />
+    <Content Include="BackWeb\Js\backweb\User\sqb_bweb_users_role.js" />
+    <Content Include="BackWeb\Js\jquery-1.7.2.min.js" />
+    <Content Include="BackWeb\Js\jquery.cookie.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\jquery.easyui.min.js" />
+    <Content Include="BackWeb\Js\backweb\sqb_bweb_login.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-af.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-bg.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-ca.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-cs.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-cz.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-da.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-de.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-en.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-es.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-fr.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-nl.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-pt_BR.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-ru.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-tr.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="BackWeb\Js\jquery.easyui\locale\easyui-lang-zh_TW.js" />
+    <Content Include="BackWeb\Main\sqb_bweb_center.aspx" />
+    <Content Include="BackWeb\Main\sqb_bweb_east.aspx" />
+    <Content Include="BackWeb\Main\sqb_bweb_north.aspx" />
+    <Content Include="BackWeb\Main\sqb_bweb_south.aspx" />
+    <Content Include="BackWeb\Main\sqb_bweb_west.aspx" />
+    <Content Include="BackWeb\Massage\sqb_bweb_message.aspx" />
+    <Content Include="BackWeb\Massage\sqb_bweb_message_add.aspx" />
+    <Content Include="BackWeb\Massage\sqb_bweb_message_manage.aspx" />
+    <Content Include="BackWeb\Notice\sqb_bweb_notice.aspx" />
+    <Content Include="BackWeb\Notice\sqb_bweb_notice_main.aspx" />
+    <Content Include="BackWeb\Notice\sqb_bweb_notice_send.aspx" />
+    <Content Include="BackWeb\Photo\sqb_bweb_photo_manage.aspx" />
+    <Content Include="BackWeb\Route\sqb_bweb_rount_dayline.aspx" />
+    <Content Include="BackWeb\Route\sqb_bweb_rount_detail.aspx" />
+    <Content Include="BackWeb\Route\sqb_bweb_rount_map.aspx" />
+    <Content Include="BackWeb\Route\sqb_bweb_rount_select.aspx" />
+    <Content Include="BackWeb\sqb_bweb_login.aspx" />
+    <Content Include="BackWeb\Sys\sqb_bweb_property.aspx" />
+    <Content Include="BackWeb\Sys\sqb_bweb_sysset.aspx" />
+    <Content Include="BackWeb\User\sqb_bweb_users.aspx" />
+    <Content Include="BackWeb\User\sqb_bweb_users_groups.aspx" />
+    <Content Include="BackWeb\User\sqb_bweb_users_role.aspx" />
+    <Content Include="BackWeb\User\sqb_bweb_users_role_allow.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="MobileWeb\Attendance\sqb_mweb_attendance_manage.aspx" />
+    <Content Include="MobileWeb\Attendance\sqb_mweb_attendance_select.aspx" />
+    <Content Include="MobileWeb\Attendance\sqb_mweb_sigh.aspx" />
+    <Content Include="MobileWeb\Attendance\sqb_mweb_attendance.aspx" />
+    <Content Include="MobileWeb\Css\jquery.mobile\images\ajax-loader.gif" />
+    <Content Include="MobileWeb\Css\jquery.mobile\images\ajax-loader.png" />
+    <Content Include="MobileWeb\Css\jquery.mobile\images\icons-18-black.png" />
+    <Content Include="MobileWeb\Css\jquery.mobile\images\icons-18-white.png" />
+    <Content Include="MobileWeb\Css\jquery.mobile\images\icons-36-black.png" />
+    <Content Include="MobileWeb\Css\jquery.mobile\images\icons-36-white.png" />
+    <Content Include="MobileWeb\Css\jquery.mobile\jquery.mobile-1.1.1.css" />
+    <Content Include="MobileWeb\Css\jquery.mobile\jquery.mobile-1.1.1.min.css" />
+    <Content Include="MobileWeb\Css\jquery.mobile\jquery.mobile.structure-1.1.1.css" />
+    <Content Include="MobileWeb\Css\jquery.mobile\jquery.mobile.structure-1.1.1.min.css" />
+    <Content Include="MobileWeb\Css\jquery.mobile\jquery.mobile.theme-1.1.1.css" />
+    <Content Include="MobileWeb\Css\jquery.mobile\jquery.mobile.theme-1.1.1.min.css" />
+    <Content Include="MobileWeb\Dialog\dialog_error.aspx" />
+    <Content Include="MobileWeb\Dialog\dialog_message.aspx" />
+    <Content Include="MobileWeb\Document\sqb_mweb_document_design.aspx" />
+    <Content Include="MobileWeb\Document\sqb_mweb_document_manage.aspx" />
+    <Content Include="MobileWeb\Document\sqb_mweb_folder_design.aspx" />
+    <Content Include="MobileWeb\Document\sqb_mweb_folder_list.aspx" />
+    <Content Include="MobileWeb\Document\sqb_mweb_folder_select.aspx" />
+    <Content Include="MobileWeb\Images\login.jpg" />
+    <Content Include="MobileWeb\Js\jquery-1.8.0.min.js" />
+    <Content Include="MobileWeb\Js\jquery.mobile\jquery.mobile-1.1.1.js" />
+    <Content Include="MobileWeb\Js\jquery.mobile\jquery.mobile-1.1.1.min.js" />
+    <Content Include="MobileWeb\Massage\sqb_mweb_massage_detail.aspx" />
+    <Content Include="MobileWeb\Notice\sqb_mweb_ notice_detail.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_client_add.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_client_call.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_client_info.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_client_list.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_client_select.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_dayline.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_takephoto.aspx" />
+    <Content Include="MobileWeb\Route\sqb_mweb_visit.aspx" />
+    <Content Include="MobileWeb\sqb_mweb_login.aspx" />
+    <Content Include="MobileWeb\sqb_mweb_main.aspx" />
+    <Content Include="MobileWeb\Massage\sqb_mweb_massage_manage.aspx" />
+    <Content Include="MobileWeb\Massage\sqb_mweb_massage_send.aspx" />
+    <Content Include="MobileWeb\Notice\sqb_mweb_notice_release.aspx" />
+    <Content Include="MobileWeb\Sys\sqb_mweb_password_change.aspx" />
+    <Content Include="MobileWeb\Sys\sqb_mweb_system_set.aspx" />
+    <Content Include="MobileWeb\Sys\sqb_mweb_system_setpage.aspx" />
+    <Content Include="MobileWeb\WebControl\LoginControl.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="BackWeb\sqb_bweb_main.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackWeb\Agency\sqb_bweb_sqb_agency.aspx.cs">
+      <DependentUpon>sqb_bweb_sqb_agency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Agency\sqb_bweb_sqb_agency.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_sqb_agency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Agency\sqb_bweb_sqb_agency_add.aspx.cs">
+      <DependentUpon>sqb_bweb_sqb_agency_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Agency\sqb_bweb_sqb_agency_add.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_sqb_agency_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_attendance_manage.aspx.cs">
+      <DependentUpon>sqb_bweb_attendance_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_attendance_manage.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_attendance_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_attendance_query.aspx.cs">
+      <DependentUpon>sqb_bweb_attendance_query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_attendance_query.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_attendance_query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_attendance_statistics.aspx.cs">
+      <DependentUpon>sqb_bweb_attendance_statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_attendance_statistics.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_attendance_statistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_getUserJson.ashx.cs">
+      <DependentUpon>sqb_bweb_getUserJson.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_holiday_edit.aspx.cs">
+      <DependentUpon>sqb_bweb_holiday_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_holiday_edit.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_holiday_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_holiday_set.aspx.cs">
+      <DependentUpon>sqb_bweb_holiday_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_holiday_set.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_holiday_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_scheduling_edit.aspx.cs">
+      <DependentUpon>sqb_bweb_scheduling_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_scheduling_edit.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_scheduling_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_scheduling_set.aspx.cs">
+      <DependentUpon>sqb_bweb_scheduling_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_scheduling_set.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_scheduling_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_select_person.aspx.cs">
+      <DependentUpon>sqb_bweb_select_person.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Attendance\sqb_bweb_select_person.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_select_person.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Client\sqb_bweb_sqb_client.aspx.cs">
+      <DependentUpon>sqb_bweb_sqb_client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Client\sqb_bweb_sqb_client.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_sqb_client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Client\sqb_bweb_sqb_client_add.aspx.cs">
+      <DependentUpon>sqb_bweb_sqb_client_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Client\sqb_bweb_sqb_client_add.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_sqb_client_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_design.aspx.cs">
+      <DependentUpon>sqb_bweb_document_design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_design.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_document_design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_list.aspx.cs">
+      <DependentUpon>sqb_bweb_document_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_list.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_document_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_log.aspx.cs">
+      <DependentUpon>sqb_bweb_document_log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_log.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_document_log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_manage.aspx.cs">
+      <DependentUpon>sqb_bweb_document_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_manage.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_document_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_query.aspx.cs">
+      <DependentUpon>sqb_bweb_document_query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_document_query.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_document_query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_design.aspx.cs">
+      <DependentUpon>sqb_bweb_folder_design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_design.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_folder_design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_manage.aspx.cs">
+      <DependentUpon>sqb_bweb_folder_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_manage.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_folder_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_select.aspx.cs">
+      <DependentUpon>sqb_bweb_folder_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_select.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_folder_select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Document\sqb_bweb_folder_tree.ashx.cs">
+      <DependentUpon>sqb_bweb_folder_tree.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_center.aspx.cs">
+      <DependentUpon>sqb_bweb_center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_center.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_east.aspx.cs">
+      <DependentUpon>sqb_bweb_east.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_east.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_east.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_north.aspx.cs">
+      <DependentUpon>sqb_bweb_north.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_north.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_north.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_south.aspx.cs">
+      <DependentUpon>sqb_bweb_south.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_south.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_south.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_west.aspx.cs">
+      <DependentUpon>sqb_bweb_west.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Main\sqb_bweb_west.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_west.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message.aspx.cs">
+      <DependentUpon>sqb_bweb_message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message_add.aspx.cs">
+      <DependentUpon>sqb_bweb_message_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message_add.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_message_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message_manage.aspx.cs">
+      <DependentUpon>sqb_bweb_message_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message_manage.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_message_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Massage\sqb_bweb_message_select.ashx.cs">
+      <DependentUpon>sqb_bweb_message_select.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Notice\sqb_bweb_notice.aspx.cs">
+      <DependentUpon>sqb_bweb_notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Notice\sqb_bweb_notice.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Notice\sqb_bweb_notice_main.aspx.cs">
+      <DependentUpon>sqb_bweb_notice_main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Notice\sqb_bweb_notice_main.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_notice_main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Notice\sqb_bweb_notice_send.aspx.cs">
+      <DependentUpon>sqb_bweb_notice_send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Notice\sqb_bweb_notice_send.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_notice_send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Photo\sqb_bweb_photo_manage.aspx.cs">
+      <DependentUpon>sqb_bweb_photo_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Photo\sqb_bweb_photo_manage.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_photo_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_dayline.aspx.cs">
+      <DependentUpon>sqb_bweb_rount_dayline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_dayline.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_rount_dayline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_dayline_tree.ashx.cs">
+      <DependentUpon>sqb_bweb_rount_dayline_tree.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_detail.aspx.cs">
+      <DependentUpon>sqb_bweb_rount_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_detail.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_rount_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_map.aspx.cs">
+      <DependentUpon>sqb_bweb_rount_map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_map.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_rount_map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_select.aspx.cs">
+      <DependentUpon>sqb_bweb_rount_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Route\sqb_bweb_rount_select.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_rount_select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\sqb_bweb_login.aspx.cs">
+      <DependentUpon>sqb_bweb_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\sqb_bweb_login.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Sys\sqb_bweb_property.aspx.cs">
+      <DependentUpon>sqb_bweb_property.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Sys\sqb_bweb_property.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_property.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\Sys\sqb_bweb_sysset.aspx.cs">
+      <DependentUpon>sqb_bweb_sysset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\Sys\sqb_bweb_sysset.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_sysset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users.aspx.cs">
+      <DependentUpon>sqb_bweb_users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users_groups.aspx.cs">
+      <DependentUpon>sqb_bweb_users_groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users_groups.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_users_groups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users_role.aspx.cs">
+      <DependentUpon>sqb_bweb_users_role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users_role.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_users_role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users_role_allow.aspx.cs">
+      <DependentUpon>sqb_bweb_users_role_allow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\User\sqb_bweb_users_role_allow.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_users_role_allow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\WebService\sqb_bweb_users.ashx.cs">
+      <DependentUpon>sqb_bweb_users.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BackWeb\WebService\sqb_bweb_users_groups.ashx.cs">
+      <DependentUpon>sqb_bweb_users_groups.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance_manage.aspx.cs">
+      <DependentUpon>sqb_mweb_attendance_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance_manage.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_attendance_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance_select.aspx.cs">
+      <DependentUpon>sqb_mweb_attendance_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance_select.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_attendance_select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_sigh.aspx.cs">
+      <DependentUpon>sqb_mweb_sigh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_sigh.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_sigh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance_ajax.ashx.cs">
+      <DependentUpon>sqb_mweb_attendance_ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance.aspx.cs">
+      <DependentUpon>sqb_mweb_attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Attendance\sqb_mweb_attendance.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Dialog\dialog_error.aspx.cs">
+      <DependentUpon>dialog_error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Dialog\dialog_error.aspx.designer.cs">
+      <DependentUpon>dialog_error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Dialog\dialog_message.aspx.cs">
+      <DependentUpon>dialog_message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Dialog\dialog_message.aspx.designer.cs">
+      <DependentUpon>dialog_message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_document_design.aspx.cs">
+      <DependentUpon>sqb_mweb_document_design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_document_design.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_document_design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_document_manage.aspx.cs">
+      <DependentUpon>sqb_mweb_document_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_document_manage.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_document_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_folder_design.aspx.cs">
+      <DependentUpon>sqb_mweb_folder_design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_folder_design.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_folder_design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_folder_list.aspx.cs">
+      <DependentUpon>sqb_mweb_folder_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_folder_list.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_folder_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_folder_select.aspx.cs">
+      <DependentUpon>sqb_mweb_folder_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Document\sqb_mweb_folder_select.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_folder_select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Massage\sqb_mweb_massage_detail.aspx.cs">
+      <DependentUpon>sqb_mweb_massage_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Massage\sqb_mweb_massage_detail.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_massage_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Notice\sqb_mweb_ notice_detail.aspx.cs">
+      <DependentUpon>sqb_mweb_ notice_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Notice\sqb_mweb_ notice_detail.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_ notice_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_add.aspx.cs">
+      <DependentUpon>sqb_mweb_client_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_add.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_client_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_call.aspx.cs">
+      <DependentUpon>sqb_mweb_client_call.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_call.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_client_call.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_info.aspx.cs">
+      <DependentUpon>sqb_mweb_client_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_info.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_client_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_list.aspx.cs">
+      <DependentUpon>sqb_mweb_client_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_list.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_client_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_select.aspx.cs">
+      <DependentUpon>sqb_mweb_client_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_client_select.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_client_select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_dayline.aspx.cs">
+      <DependentUpon>sqb_mweb_dayline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_dayline.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_dayline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_takephoto.aspx.cs">
+      <DependentUpon>sqb_mweb_takephoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_takephoto.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_takephoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_visit.aspx.cs">
+      <DependentUpon>sqb_mweb_visit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Route\sqb_mweb_visit.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_visit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\sqb_mweb_login.aspx.cs">
+      <DependentUpon>sqb_mweb_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\sqb_mweb_login.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\sqb_mweb_main.aspx.cs">
+      <DependentUpon>sqb_mweb_main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\sqb_mweb_main.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Massage\sqb_mweb_massage_manage.aspx.cs">
+      <DependentUpon>sqb_mweb_massage_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Massage\sqb_mweb_massage_manage.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_massage_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Massage\sqb_mweb_massage_send.aspx.cs">
+      <DependentUpon>sqb_mweb_massage_send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Massage\sqb_mweb_massage_send.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_massage_send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Notice\sqb_mweb_notice_release.aspx.cs">
+      <DependentUpon>sqb_mweb_notice_release.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Notice\sqb_mweb_notice_release.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_notice_release.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Sys\sqb_mweb_password_change.aspx.cs">
+      <DependentUpon>sqb_mweb_password_change.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Sys\sqb_mweb_password_change.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_password_change.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Sys\sqb_mweb_system_set.aspx.cs">
+      <DependentUpon>sqb_mweb_system_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Sys\sqb_mweb_system_set.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_system_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\Sys\sqb_mweb_system_setpage.aspx.cs">
+      <DependentUpon>sqb_mweb_system_setpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\Sys\sqb_mweb_system_setpage.aspx.designer.cs">
+      <DependentUpon>sqb_mweb_system_setpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWeb\WebControl\LoginControl.ascx.cs">
+      <DependentUpon>LoginControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWeb\WebControl\LoginControl.ascx.designer.cs">
+      <DependentUpon>LoginControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BackWeb\sqb_bweb_main.aspx.cs">
+      <DependentUpon>sqb_bweb_main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackWeb\sqb_bweb_main.aspx.designer.cs">
+      <DependentUpon>sqb_bweb_main.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="BackWeb\Dialog\" />
+    <Folder Include="MobileWeb\Document\Files\" />
+    <Folder Include="MobileWeb\temp\" />
+    <Folder Include="MobileWeb\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataClass\DataClass.csproj">
+      <Project>{63095207-872C-4A62-B302-1003A021F4C5}</Project>
+      <Name>DataClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClass\EntityClass.csproj">
+      <Project>{A2D63CFA-0699-421C-8DB5-1CF0C63E071B}</Project>
+      <Name>EntityClass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MobileWeb\Attendance\sqb_mweb_attendance_ajax.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackWeb\Attendance\sqb_bweb_getUserJson.ashx" />
+    <None Include="BackWeb\Css\jquery.easyui\themes\default\images\Thumbs.db" />
+    <None Include="BackWeb\Css\jquery.easyui\themes\gray\images\Thumbs.db" />
+    <Content Include="BackWeb\MasterPage.Master" />
+    <Content Include="BackWeb\Document\sqb_bweb_folder_tree.ashx" />
+    <Content Include="BackWeb\Route\sqb_bweb_rount_dayline_tree.ashx" />
+    <Content Include="BackWeb\Massage\sqb_bweb_message_select.ashx" />
+    <Content Include="BackWeb\WebService\sqb_bweb_users_groups.ashx" />
+    <Content Include="BackWeb\WebService\sqb_bweb_users.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15659</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

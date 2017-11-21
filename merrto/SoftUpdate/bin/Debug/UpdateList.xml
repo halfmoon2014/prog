@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater>
+  <description>迈途管理软件更新</description>
+  <Updater>
+	<Url>http://120.43.209.230:808/AutoUpdate$</Url>
+	<LastUpdateTime>2014-07-12</LastUpdateTime>
+  </Updater>
+  <Application applicationId="ItemSoft">
+    <EntryPoint>Merrto.exe</EntryPoint>
+    <Location>.</Location>
+    <Version>1.0.0.0</Version>
+  </Application>
+  <Files>
+	<File Ver="1.0.0.0" Name="Merrto" />
+	<File Ver="1.0.0.0" Name="Sound" />
+	<File Ver="1.0.0.0" Name="SoftUpdate" />
+  </Files>
+</AutoUpdater>

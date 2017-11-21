@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="../css/jquerymobile/themes/default/jquery.mobile-1.4.2.min.css">
+    <script src="../js/jquerymobile/jquery.js"></script>
+    <script src="../js/jquerymobile/jquery.mobile-1.4.2.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/reportforfabric/reportforfabric.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+    <div data-role="page" id="reportforfabricpage">
+        <div data-role="header" data-position="fixed">
+            <a href="#" onclick="home()" data-icon="home">首页</a>
+            <h1>
+                ReportForFabric</h1>
+        </div>
+        <!-- /header -->
+        <div role="main" id="reportforfabric_main" class="ui-content">
+            <ul data-role="listview" class="ui-listview-outer">
+                <li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="false">
+                    <h5>
+                        查询条件</h5>
+                    <table>
+                        <tr>
+                            <td>
+                                报告编号:
+                            </td>
+                            <td>
+                            <input type="text" id="reportnumber" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                供应商名称:
+                            </td>
+                            <td>
+                            <input type="text" id="supplier" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                材料编码:
+                            </td>
+                            <td>
+                            <input type="text" id="materialcode" />
+                            </td>
+                        </tr>
+                        <tr><td colspan="2"><a href="#" data-role="button"  data-icon="search" onclick="searchReport()" >查询</a></td></tr>
+                    </table>
+                </li>
+            </ul>
+            <div id="reportforfabric_content">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed">
+            <h4>
+                Copyright © lilanz.com 版权所有</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+</body>
+</html>
